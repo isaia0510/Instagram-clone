@@ -9,5 +9,6 @@ export const COLORS = {
     buttom_edit_profil: '#ECECEC',
     search_color: '#EFEFEF',
     button_secondary: '#4687DC',
+    highlight_color: '#CBC9C9',
     storyGradient: ['#EB6437', '#CA335B', '#A60AF3']
 };
