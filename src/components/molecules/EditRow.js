@@ -13,7 +13,6 @@ export default function EditRow({ label, defaultValue, placeholder, onChangeText
                 placeholder={placeholder}
                 onChangeText={onChangeText}
             />
-            <Separator />
         </View>
     );
 }

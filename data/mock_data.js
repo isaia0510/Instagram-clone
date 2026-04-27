@@ -6,6 +6,7 @@ import PostPhoto2 from '../assets/user2.jpg';
 import PostPhoto3 from '../assets/words1.jpg';
 import PostPhoto4 from '../assets/words2.jpg';
 import Highlight from '../assets/icon.png';
+import MyVideo from '../assets/call.mp4';
 
 export const MOCK_DATA = {
     users: {
@@ -80,7 +81,7 @@ export const MOCK_DATA = {
         },
         {
             id: "p4",
-            userId: "user_2",
+            userId: "user_3",
             images: [PostPhoto3, PostPhoto4],
             likes: "158k",
             comments: "5000",
@@ -88,6 +89,25 @@ export const MOCK_DATA = {
             date: "2026-04-22"
         },
     ],
+
+    reels: [
+        {
+            id: "r1",
+            userId : "user_2",
+            video: MyVideo,
+            caption: "One of the most thrilling K-movie!",
+            musicName: "K-drama lover original",
+            likes: "35k"
+        },
+        {
+            id: "r2",
+            userId : "user_3",
+            video: MyVideo,
+            caption: "One of the most thrilling K-movie!",
+            musicName: "Another original original",
+            likes: "5k"
+        },
+    ],  
 
     notes: [
         {

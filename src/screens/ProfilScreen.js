@@ -35,7 +35,7 @@ export default function ProfilScreen({ onNavigate }) {
         <View style={styles.container}>
             <ProfilTopHeader username={user.username} />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <ProfileHeader user={user} stats={user.stats} />
+                <ProfileHeader user={user} stats={user.stats} onNavigate={onNavigate} />
                 <HighlighScroll highlights={userHighlights} />
                 <TabSelector activeTab={activeTab} onTabChange={setActiveTab} />
                 {renderTabContent()}

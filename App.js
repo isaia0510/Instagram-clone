@@ -5,6 +5,8 @@ import { COLORS } from './src/theme/color';
 import HomeScreen from './src/screens/HomeScreen';
 import ProfilScreen from './src/screens/ProfilScreen';
 import MessageScreen from './src/screens/MessageScreen';
+import EditProfileScreen from './src/screens/EditProfileScreen';
+import ReelScreen from './src/screens/ReelScreen';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('Home');
@@ -13,10 +15,14 @@ export default function App() {
     switch(currentScreen) {
       case 'Home':
         return <HomeScreen onNavigate={setCurrentScreen} />;
+      case 'Reel':
+        return <ReelScreen onNavigate={setCurrentScreen} />;
       case 'Messages':
         return <MessageScreen onNavigate={setCurrentScreen} />;
       case 'Profile':
         return <ProfilScreen onNavigate={setCurrentScreen} />;
+      case 'EditProfile':
+        return <EditProfileScreen onNavigate={setCurrentScreen} />;
       default:
         return <HomeScreen onNavigate={setCurrentScreen} />;
     }

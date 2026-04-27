@@ -14,7 +14,7 @@ export default function BottomTabBar({ activeRoute, userImage, onNavigate }) {
       <IconMenu 
         name="reels" 
         isActive={activeRoute === 'reels'} 
-        onPress={() => console.log('Reels')} 
+        onPress={() => onNavigate('Reel')} 
       />
       <IconMenu 
         name="send" 

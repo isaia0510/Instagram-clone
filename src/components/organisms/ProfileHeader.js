@@ -7,7 +7,7 @@ import StatItem from '../molecules/StatItem';
 import CustomButton from '../atoms/CustomButton';
 import { COLORS } from '../../theme/color';
 
-export default function ProfileHeader({ user, stats }) {
+export default function ProfileHeader({ user, stats, onNavigate }) {
     return(
         <View style={styles.container}>
             <View style={styles.topRow}>
@@ -35,7 +35,7 @@ export default function ProfileHeader({ user, stats }) {
                     title="Edit profile" 
                     type="primary" 
                     style={styles.flexButton} 
-                    onPress={() => console.log('Edit')}
+                    onPress={() => onNavigate('EditProfile')}
                 />
                 <CustomButton 
                     title="Share profile" 
