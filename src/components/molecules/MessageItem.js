@@ -22,13 +22,27 @@ export default function MessageItem({ user, lastMessage, isUnread}) {
                     >
                         {lastMessage}
                     </MyText>
-                    {isUnread && <NotificationBadge isAbsolute={false} size={8} isNotification={false} />}
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.cameraIcon}>
-                <Ionicons name="camera-outline" size={24} color={COLORS.text_primary} />
-            </TouchableOpacity>
+            <View style={styles.rightSection}>
+                {isUnread && (
+                    <NotificationBadge
+                        isAbsolute={false}
+                        size={8}
+                        isNotification={false}
+                    />
+                )}
+
+                <TouchableOpacity style={styles.cameraIcon}>
+                    <Ionicons
+                        name="camera-outline"
+                        size={24}
+                        color={COLORS.text_primary}
+                    />
+                </TouchableOpacity>
+            </View>
+
         </TouchableOpacity>
     );
 }
@@ -52,6 +66,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         marginTop: 2,
+    },
+    rightSection: {
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     lastMessage: { fontSize: 13, marginRight: 5, maxWidth: '85%' },
     cameraIcon: { paddingLeft: 10 },

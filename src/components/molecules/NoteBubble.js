@@ -19,7 +19,7 @@ export default function NoteBubble({ user, note, onPress}) {
                 </MyText>
             </View>
 
-            <Avatar source={user.image} size="medium"/>
+            <Avatar source={user.image} size="large"/>
 
             <MyText style={styles.username}>
                 {user.username}

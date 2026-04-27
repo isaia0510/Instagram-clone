@@ -9,7 +9,7 @@ export default function PhotoGrid({ photos }) {
         data={photos}
         renderItem={({ item }) => (
           <GridItem 
-            source={item.image} 
+            source={item.images[0]} 
             onPress={() => console.log('Photo cliquée:', item.id)} 
           />
         )}

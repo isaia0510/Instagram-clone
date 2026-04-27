@@ -10,9 +10,19 @@ export default function StoriesSection({ stories}) {
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => (
-                    <StoryCircle user={item} />
-                )}
+                renderItem={({ item }) => {
+                    const isCurrentUser = item.id === "user_1";
+                    
+                    return (
+                        <StoryCircle 
+                            user={{
+                                ...item,
+                                username: isCurrentUser ? "Your story" : item.username
+                            }} 
+                            showPlusIcon={isCurrentUser}
+                        />
+                    );
+                }}
                 contentContainerStyle={styles.listContent}
             />
         </View>

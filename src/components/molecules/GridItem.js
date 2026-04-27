@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     padding: 1,
   },
   image: {
-    flex: 1,
+    width: '100%',
+    height: '100%',
     backgroundColor: '#f0f0f0',
   },
 });

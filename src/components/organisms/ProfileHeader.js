@@ -15,7 +15,7 @@ export default function ProfileHeader({ user, stats }) {
 
                 <View style={styles.rightColumn}>
                     <MyText type="bold" style={styles.usernameText}>
-                        {user.username}
+                        {user.name}
                     </MyText>
 
                     <View style={styles.statsContainer}>
@@ -62,13 +62,13 @@ const styles = StyleSheet.create({
     },
     rightColumn: {
         flex: 1,
-        marginLeft: 20, 
+        marginLeft: 8, 
         justifyContent: 'center',
     },
     usernameText: {
         fontSize: 18, 
         marginBottom: 10,
-        marginLeft: 20, 
+        marginLeft: 36, 
     },
     statsContainer: {
         flexDirection: 'row',

@@ -1,14 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, FlatList, ScrollView } from 'react-native';
-import ReelOverlay from './src/components/organisms/ReelOverlay';
-import UserPhoto from './assets/user.jpg';
-import PostPhoto1 from './assets/user1.jpg';
-import PostPhoto2 from './assets/user2.jpg';
+import { COLORS } from './src/theme/color';
+import HomeScreen from './src/screens/HomeScreen';
+import ProfilScreen from './src/screens/ProfilScreen';
+import MessageScreen from './src/screens/MessageScreen';
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState('Home');
+
+  const renderScreen = () => {
+    switch(currentScreen) {
+      case 'Home':
+        return <HomeScreen onNavigate={setCurrentScreen} />;
+      case 'Messages':
+        return <MessageScreen onNavigate={setCurrentScreen} />;
+      case 'Profile':
+        return <ProfilScreen onNavigate={setCurrentScreen} />;
+      default:
+        return <HomeScreen onNavigate={setCurrentScreen} />;
+    }
+  }
   return (
     <View style={styles.container}>
-      
+      {renderScreen()}
     </View>
   );
 }
@@ -16,7 +31,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f6f1f1',
-    paddingTop: 40,
+    backgroundColor: COLORS.primary_color,
   },
 });
