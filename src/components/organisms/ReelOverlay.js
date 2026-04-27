@@ -9,7 +9,7 @@ export default function ReelOverlay({ user, caption, musicName }) {
     return (
         <View style={styles.container} pointerEvents="box-none">
             
-            <PostActions layout="vertical" />
+            <PostActions layout="vertical" isLight={true}/>
 
             <View style={styles.bottomInfo}>
                 <View style={styles.userRow}>
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     },
     bottomInfo: {
         paddingHorizontal: 15,
-        paddingBottom: 25,
+        paddingBottom: 95,
         width: '80%', 
     },
     userRow: {
