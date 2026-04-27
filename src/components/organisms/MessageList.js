@@ -41,9 +41,9 @@ export default function MessageList({ notes, messages }) {
             ListHeaderComponent={renderHeader}
             renderItem={({ item }) => (
                 <MessageItem 
-                user={item.user} 
-                lastMessage={item.lastMessage} 
-                isUnread={item.isUnread} 
+                    user={item.user} 
+                    lastMessage={item.lastMessage} 
+                    isUnread={item.isUnread} 
                 />
             )}
             showsVerticalScrollIndicator={false}

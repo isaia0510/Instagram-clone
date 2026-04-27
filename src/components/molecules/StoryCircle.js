@@ -33,7 +33,7 @@ export default function StoryCircle({ user, onPress }) {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        marginHorizontal: 8,
+        marginHorizontal: 12,
         width: 75,
     },
     username: {

@@ -3,13 +3,13 @@ import { View, StyleSheet } from 'react-native';
 import { COLORS } from '../../theme/color';
 import IconMenu from '../atoms/IconMenu';
 
-export default function BottomTabBar({ activeRoute, userImage }) {
+export default function BottomTabBar({ activeRoute, userImage, onNavigate }) {
   return (
     <View style={styles.container}>
       <IconMenu 
         name="home" 
         isActive={activeRoute === 'home'} 
-        onPress={() => console.log('Home')} 
+        onPress={() => onNavigate('Home') } 
       />
       <IconMenu 
         name="reels" 
@@ -19,7 +19,7 @@ export default function BottomTabBar({ activeRoute, userImage }) {
       <IconMenu 
         name="send" 
         isActive={activeRoute === 'send'} 
-        onPress={() => console.log('Send')} 
+        onPress={() => onNavigate('Messages')} 
       />
       <IconMenu 
         name="search" 
@@ -30,7 +30,7 @@ export default function BottomTabBar({ activeRoute, userImage }) {
         name="profile" 
         isActive={activeRoute === 'profile'} 
         userImage={userImage}
-        onPress={() => console.log('Profile')} 
+        onPress={() => onNavigate('Profile')} 
       />
     </View>
   );
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     height: 70, 
     backgroundColor: COLORS.primary_color,
     borderTopWidth: 0.5,
-    borderTopColor: COLORS.separator,
+    borderTopColor: '#dedddd',
     alignItems: 'center',
     justifyContent: 'space-around',
     paddingBottom: 25, 
