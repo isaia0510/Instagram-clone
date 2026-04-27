@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 15,
         borderBottomWidth: 0.5,
-        borderBottomColor: COLORS.secondary_color,
+        borderBottomColor: COLORS.highlight_color,
     },
     input : {
         flex: 1,

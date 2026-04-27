@@ -11,7 +11,7 @@ export default function Separator({ style }) {
 const styles = StyleSheet.create({
     line: {
         height: 0.5,
-        backgroundColor: COLORS.secondary_color,
+        backgroundColor:'#dbdbdb',
         width: '100%',
     }
 });
