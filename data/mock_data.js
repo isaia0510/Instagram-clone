@@ -7,6 +7,7 @@ import PostPhoto3 from '../assets/words1.jpg';
 import PostPhoto4 from '../assets/words2.jpg';
 import Highlight from '../assets/icon.png';
 import MyVideo from '../assets/call.mp4';
+import MyVideo1 from '../assets/fairy.mp4';
 
 export const MOCK_DATA = {
     users: {
@@ -102,7 +103,7 @@ export const MOCK_DATA = {
         {
             id: "r2",
             userId : "user_3",
-            video: MyVideo,
+            video: MyVideo1,
             caption: "One of the most thrilling K-movie!",
             musicName: "Another original original",
             likes: "5k"
