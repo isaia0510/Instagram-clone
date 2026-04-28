@@ -7,6 +7,7 @@ import ProfilScreen from './src/screens/ProfilScreen';
 import MessageScreen from './src/screens/MessageScreen';
 import EditProfileScreen from './src/screens/EditProfileScreen';
 import ReelScreen from './src/screens/ReelScreen';
+import SearchScreen from './src/screens/SearchScreen';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('Home');
@@ -19,6 +20,8 @@ export default function App() {
         return <ReelScreen onNavigate={setCurrentScreen} />;
       case 'Messages':
         return <MessageScreen onNavigate={setCurrentScreen} />;
+      case 'Search':
+        return <SearchScreen onNavigate={setCurrentScreen} />;
       case 'Profile':
         return <ProfilScreen onNavigate={setCurrentScreen} />;
       case 'EditProfile':
@@ -27,6 +30,7 @@ export default function App() {
         return <HomeScreen onNavigate={setCurrentScreen} />;
     }
   }
+  
   return (
     <View style={styles.container}>
       {renderScreen()}

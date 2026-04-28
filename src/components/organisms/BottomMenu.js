@@ -24,7 +24,7 @@ export default function BottomTabBar({ activeRoute, userImage, onNavigate }) {
       <IconMenu 
         name="search" 
         isActive={activeRoute === 'search'} 
-        onPress={() => console.log('Search')} 
+        onPress={() => onNavigate('Search')} 
       />
       <IconMenu 
         name="profile" 
